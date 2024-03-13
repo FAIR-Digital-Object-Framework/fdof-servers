@@ -1,0 +1,1 @@
+dcat:Dataset a owl:Class .
