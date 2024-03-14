@@ -12,7 +12,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class CustomHTTPMethodsServer {
 
     public static String getFileExtension(Path path) {
         if(!Files.isRegularFile(path)) {
@@ -107,7 +107,6 @@ public class Main {
                 .get("/{id}", getHandler)
                 .addHttpHandler(HandlerType.INVALID, "/{id}", customMethodHandler)
                 .start(7070);
-
 
     }
 }
