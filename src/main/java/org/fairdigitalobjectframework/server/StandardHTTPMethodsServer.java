@@ -80,8 +80,8 @@ public class StandardHTTPMethodsServer {
 
         var app = Javalin.create(/*config*/)
                 .get("/{id}", ctx -> readResource(ctx, "digital object"))
-                .get("/{id}/identity", ctx -> readResource(ctx, "identity record"))
-                .get("/{id}/metadata", ctx -> readResource(ctx, "metadata record"))
+                .get("/{id}/identifierRecord", ctx -> readResource(ctx, "identity record"))
+                .get("/{id}/metadataRecord", ctx -> readResource(ctx, "metadata record"))
                 .get("/{id}/type", ctx -> readResource(ctx, "type record"))
                 .start(7070);
 
